@@ -119,7 +119,7 @@ public:
       if (!res) return WAIT;
       if (type == TYPE_PLUS) {
         char buf2[48];
-        int n;
+        int n = 0;
         sscanf(buf, "\r\n+UDOPN: %[^\r]\r\n", buf2);
         sscanf(buf2, "%d,\"%[^\"]", n, res);
       }

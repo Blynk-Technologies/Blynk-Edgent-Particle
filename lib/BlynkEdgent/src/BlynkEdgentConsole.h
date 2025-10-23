@@ -148,7 +148,7 @@ void Edgent::initConsoleCommands() {
       }
       for (int i = 0; i < found; i++) {
         String ssid, sec, bssid;
-        int chan, rssi;
+        int chan = -1, rssi = 0;
         NetMgrWiFi.scanGetResult(i, ssid, sec, rssi, bssid, chan);
         bool current = (bssid == NetMgrWiFi.getNetworkBSSID());
         _console.printf(

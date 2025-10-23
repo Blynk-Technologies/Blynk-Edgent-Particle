@@ -12,7 +12,7 @@
 - `Preferences` - Configuration storage for Particle and ESP8266 platforms, provides compatibility with the native ESP32 Preferences library.
 
 Supported Particle boards:
-- `Argon`, `Boron`, `Photon 2`, `P2`, `Tracker`
+- `Muon`, `Argon`, `Boron`, `Photon 2`, `Tracker`, `P2`, `BSOM`, `MSOM`
 
 Tested Particle OS versions:
 - `5.8.0`

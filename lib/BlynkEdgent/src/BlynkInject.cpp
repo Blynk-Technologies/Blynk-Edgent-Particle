@@ -205,7 +205,7 @@ void BlynkInject::parse_message() {
         char buff[256];
         for (int i = 0; i < wifi_nets; i++) {
           String ssid, sec, bssid;
-          int chan, rssi;
+          int chan = -1, rssi = 0;
           NetMgrWiFi.scanGetResult(i, ssid, sec, rssi, bssid, chan);
           // skip weak and hidden networks
           if (rssi >= -90 && ssid.length()) {
