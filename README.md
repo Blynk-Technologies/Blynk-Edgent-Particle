@@ -23,7 +23,7 @@ Tested Particle OS versions:
 - Install **Blynk IoT App** for [iOS](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Android](https://play.google.com/store/apps/details?id=cloud.blynk)
 - Install [**Particle CLI**](https://docs.particle.io/getting-started/developer-tools/cli/)
 
-## 1. Build and Upload your firmware
+## Build and Upload your firmware
 
 In `src/main.cpp`, set up your [`BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME`](https://bit.ly/BlynkInject).
 
@@ -32,6 +32,8 @@ Then, use `Particle CLI` to build the sample project:
 ```sh
 particle flash MyPhoton2 --target=5.8.0
 ```
+
+## Use your Blynk App to provision your device
 
 ## Debugging
 
