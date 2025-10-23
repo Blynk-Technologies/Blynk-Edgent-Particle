@@ -1,12 +1,6 @@
 
 # Blynk.Edgent for Particle
 
-Supported Particle boards:
-- `Argon`, `Boron`, `Photon 2`, `P2`, `Tracker`
-
-Tested Particle OS versions:
-- `5.8.0`
-
 ![image](https://github.com/blynkkk/blynkkk.github.io/raw/master/images/GithubBanner.jpg?raw=1)
 
 ## Features
@@ -16,6 +10,12 @@ Tested Particle OS versions:
 - `Blynk library` - Blynk protocol and API implementation
 - `NetMgr` - Unified `WiFi`, `Ethernet`, `Cellular` network management
 - `Preferences` - Configuration storage for Particle and ESP8266 platforms, provides compatibility with the native ESP32 Preferences library.
+
+Supported Particle boards:
+- `Argon`, `Boron`, `Photon 2`, `P2`, `Tracker`
+
+Tested Particle OS versions:
+- `5.8.0`
 
 ## Getting Started
 
