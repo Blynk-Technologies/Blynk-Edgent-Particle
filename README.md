@@ -3,13 +3,15 @@
 
 ![image](https://github.com/blynkkk/blynkkk.github.io/raw/master/images/GithubBanner.jpg?raw=1)
 
+**Blynk.Edgent** enables smart device management, provisioning, and connectivity for Particle boards using the Blynk IoT platform.
+
 ## Features
 
-- `Blynk.Edgent` - Device state management
-- `Blynk.Inject` - BLE-assisted Device and Network Provisioning
-- `Blynk library` - Blynk protocol and API implementation
-- `NetMgr` - Unified `WiFi`, `Ethernet`, `Cellular` network management
-- `Preferences` - Configuration storage for Particle and ESP8266 platforms, provides compatibility with the native ESP32 Preferences library.
+- `Blynk.Edgent` - Manages device states and connection logic.
+- `Blynk.Inject` - Handles BLE-assisted device and network provisioning.
+- `Blynk Library` - Implements the Blynk protocol and API.
+- `NetMgr` - Unified `WiFi`, `Ethernet`, and `Cellular` network management
+- `Preferences` - Configuration storage compatible with ESP32, ESP8266, and Particle platforms.
 
 Supported Particle boards:
 - `Muon`, `Argon`, `Boron`, `Photon 2`, `Tracker`, `P2`, `BSOM`, `MSOM`
@@ -19,27 +21,45 @@ Tested Particle OS versions:
 
 ## Getting Started
 
+### 0. Prerequisites
+
 - Sign up/Log in to your [Blynk Account](https://blynk.cloud)
-- Install **Blynk IoT App** for [iOS](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Android](https://play.google.com/store/apps/details?id=cloud.blynk)
-- Install [**Particle CLI**](https://docs.particle.io/getting-started/developer-tools/cli/)
+- Install **Blynk IoT App**:
+  - [iOS](https://apps.apple.com/us/app/blynk-iot/id1559317868)
+  - [Android](https://play.google.com/store/apps/details?id=cloud.blynk)
+- Install [Particle CLI](https://docs.particle.io/getting-started/developer-tools/cli/)
 
-## Build and Upload your firmware
+### 1. Build and Upload your firmware
 
-In `src/main.cpp`, set up your [`BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME`](https://bit.ly/BlynkInject).
+In `src/main.cpp`, set your [`BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME`](https://bit.ly/BlynkInject).
 
-Then, use `Particle CLI` to build the sample project:
+Compile and upload the firmware using `Particle CLI`:
 
 ```sh
 particle flash MyPhoton2 --target=5.8.0
 ```
 
-## Use your Blynk App to provision your device
+### 2. Connect your device
 
-## Debugging
+Use the **Blynk IoT App** to [provision your device](https://docs.blynk.io/en/blynk.edgent/overview#how-to-connect-a-device-with-blynk.edgent) and connect it to your Blynk account.
 
-You can change the logging level by editing `lib/NetMgr/NetMgrLogger.h`:
+### Debugging
+
+Adjust the logging level in `lib/NetMgr/NetMgrLogger.h`:
 
 ```h
 #define LOGGER_PRINT      Serial
 #define LOGGER_LOG_LEVEL  3
 ```
+
+### Enabling SSL security
+
+In `project.properties`, uncomment `dependencies.ArduinoBearSSL`.
+
+In `lib/BlynkEdgent/src/EdgentSettings.h`, uncomment `#define CONFIG_USE_SSL`.
+
+## Further Reading
+
+- [Blynk.Edgent Overview](https://docs.blynk.io/en/blynk.edgent/overview)
+- [Preferences library](https://github.com/vshymanskyy/Preferences)
+
