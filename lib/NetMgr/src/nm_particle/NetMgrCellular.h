@@ -121,7 +121,7 @@ public:
         char buf2[48];
         int n = 0;
         sscanf(buf, "\r\n+UDOPN: %[^\r]\r\n", buf2);
-        sscanf(buf2, "%d,\"%[^\"]", n, res);
+        sscanf(buf2, "%d,\"%[^\"]", &n, res);
       }
       return WAIT;
     }
